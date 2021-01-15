@@ -13,3 +13,5 @@ word = (wordbank.readlines()[wordIndex])
 print(word, end='') # the word in txt file ends w/ \n so the end does not need to have \n
 
 splitWord = list(word)
+fixedWord = splitWord[:-1]
+print(fixedWord)
