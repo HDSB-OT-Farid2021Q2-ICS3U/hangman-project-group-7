@@ -17,9 +17,6 @@ while killswitch == True:
                 print("Congradulations, you found a correct characer! ")
                 blank[position] = guessL
                 print(blank)
-            else:
-                print("Try again")    
-                killswitch1 = False       
             if blank == word:
                 print("congradulations,you beat the game")
                 killswitch = False
