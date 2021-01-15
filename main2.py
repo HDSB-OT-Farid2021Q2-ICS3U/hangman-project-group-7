@@ -2,13 +2,16 @@
 import random
 
 def win():
+    """function for when player wins"""
     print("congradulations,you beat the game")
 def lose():
+    """function for when player loses"""
     print(f"you lost the game :( | the correct word was {word}", end='')
 
-wordIndex = random.randrange(0,853)
+#random number generator
+wordIndex = random.randrange(0, 853 + 1)
 
-x = True
+#guessbank is a string because i found it to be easier to work w/ and faster performance wise
 guessbank = ''
 life = 6
 
@@ -17,11 +20,12 @@ wordbank = open('hangmanwords.txt', 'r')
 # get random line
 word = (wordbank.readlines()[wordIndex])
 # un-comment the line below to see generated world
-#print('reference -', word, end='') # the word in txt file ends w/ \n so the end does not need to have \n
+#print('reference -', word, end='')
 
 fixedWord = list(word)[:-1]
 
-while x == True:
+while True:
+# prints line of letters in the word + spaces
     for char in fixedWord:
             if char in guessbank:
                 print(char, end='')
@@ -29,19 +33,19 @@ while x == True:
                 print('_ ', end='')
     print('')
 
+# input for players guess
     guess = input('enter guess [letter / word] : ')
     if guess.lower() + '\n' == word:
         break
-        #clear
     else:
         if guess.lower() not in fixedWord:
             life -= 1
+            #insert live drawing if/else statments here
             if 0 >= life:
                 break
-            #clear
+            #-------------------------------------------
             print(f'try again | you have {life} lives left!')
         guessbank += guess.lower()
-        #clear
 
 if 0 >= life:
     lose()
