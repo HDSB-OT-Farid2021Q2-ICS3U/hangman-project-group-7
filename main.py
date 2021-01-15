@@ -18,7 +18,7 @@ print(''.join(fixedWord))
 #
 length = len(word)
 blank = []
-for x in range(0,length):
+for x in range(0, length - 1):
     blank.append('___')
 print(blank)
 killswitch = True
@@ -34,6 +34,10 @@ while killswitch == True:
                 print("Congradulations, you found a correct characer! ")
                 blank[position] = guessL
                 print(blank)
-            if blank == word:
+                killswitch1 = False
+            if blank == fixedWord:
                 print("congradulations,you beat the game")
                 killswitch = False
+            if position == length:
+                print("try again")
+                killswitch1 = False
