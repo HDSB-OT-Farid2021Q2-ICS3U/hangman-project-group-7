@@ -85,7 +85,7 @@ while True:
     print('')
     if correct == True:
         break
-# input for players guess
+    # input for players guess
     guess = input('enter guess [letter / word] : ')
     if guess.lower() + '\n' == word:
         break
