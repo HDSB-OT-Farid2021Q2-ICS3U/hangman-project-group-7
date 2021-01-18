@@ -1,4 +1,4 @@
-
+import os
 import random
 
 def win():
@@ -7,6 +7,55 @@ def win():
 def lose():
     """function for when player loses"""
     print(f"you lost the game :( | the correct word was {word}", end='')
+def SixLives():
+    print(""" +---+            
+              |   
+              |
+              |
+              |
+              |
+              ========""")
+def FiveLives():
+    print(""" +---+            
+              |   O
+              |
+              |
+              |
+              |
+              ========""")
+def FourLives():
+    print(""" +---+            
+              |   O
+              |   |
+              |   |
+              |
+              |
+              ========""")
+def ThreeLives():
+    print(""" +---+            
+              |   O
+              |   |
+              |   |
+              |  /
+              |
+              ========""")
+def TwoLives():
+    print(""" +---+            
+              |   O
+              |   |
+              |   |
+              |  / \\
+              |
+              ========""")
+def OneLife():
+     print(""" +---+            
+              |    O
+              |   \|
+              |    |
+              |   / \\
+              |
+              ========""")
+
 
 #random number generator
 wordIndex = random.randrange(0, 853 + 1)
@@ -43,7 +92,17 @@ while True:
         if guess.lower() not in fixedWord:
             life -= 1
             #insert live drawing if/else statments here
-            if 0 >= life:
+            if life == 5:
+                FiveLives()
+            elif life == 4:
+                FourLives()
+            elif life == 3:
+                ThreeLives()
+            elif life == 2:
+                TwoLives()
+            elif life == 1:
+                OneLife()
+            elif 0 >= life:
                 break
             #-------------------------------------------
             print(f'try again | you have {life} lives left!')
@@ -52,5 +111,13 @@ while True:
 
 if 0 >= life:
     lose()
+    print("""+---+
+             |   O
+             |  \|/
+             |   |
+             |  / \\
+             |
+             |
+             ========""")
 else:
     win()
