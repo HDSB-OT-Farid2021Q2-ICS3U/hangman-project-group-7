@@ -8,7 +8,7 @@ def lose():
     """function for when player loses"""
     print(f"you lost the game :( | the correct word was {word}", end='')
 def SixLives():
-    print(""" +---+            
+    print("""               +---+            
               |   
               |
               |
@@ -16,7 +16,7 @@ def SixLives():
               |
               ========""")
 def FiveLives():
-    print(""" +---+            
+    print("""               +---+            
               |   O
               |
               |
@@ -24,7 +24,7 @@ def FiveLives():
               |
               ========""")
 def FourLives():
-    print(""" +---+            
+    print("""               +---+            
               |   O
               |   |
               |   |
@@ -32,7 +32,7 @@ def FourLives():
               |
               ========""")
 def ThreeLives():
-    print(""" +---+            
+    print("""               +---+            
               |   O
               |   |
               |   |
@@ -40,7 +40,7 @@ def ThreeLives():
               |
               ========""")
 def TwoLives():
-    print(""" +---+            
+    print("""               +---+            
               |   O
               |   |
               |   |
@@ -48,7 +48,7 @@ def TwoLives():
               |
               ========""")
 def OneLife():
-     print(""" +---+            
+     print("""               +---+            
               |    O
               |   \|
               |    |
@@ -111,7 +111,7 @@ while True:
 
 if 0 >= life:
     lose()
-    print("""+---+
+    print("""              +---+
              |   O
              |  \|/
              |   |
