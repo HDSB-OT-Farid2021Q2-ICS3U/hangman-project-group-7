@@ -3,7 +3,7 @@ import random
 
 def win():
     """function for when player wins"""
-    print("congradulations,you beat the game")
+    print(f"congradulations,you beat the game you guessed {word}", end='')
 def lose():
     """function for when player loses"""
     print(f"you lost the game :( | the correct word was {word}", end='')
