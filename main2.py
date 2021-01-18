@@ -20,22 +20,24 @@ wordbank = open('hangmanwords.txt', 'r')
 # get random line
 word = (wordbank.readlines()[wordIndex])
 # un-comment the line below to see generated world
-#print('reference -', word, end='')
+print('reference -', word, end='')
 
 fixedWord = list(word)[:-1]
 
 while True:
+    correct = 1
 # prints line of letters in the word + spaces
     for char in fixedWord:
             if char in guessbank:
                 print(char, end='')
+                correct += 1
             else:
                 print('_ ', end='')
     print('')
 
 # input for players guess
     guess = input('enter guess [letter / word] : ')
-    if guess.lower() + '\n' == word:
+    if guess.lower() + '\n' == word or correct == len(fixedWord):
         break
     else:
         if guess.lower() not in fixedWord:
