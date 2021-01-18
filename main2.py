@@ -45,9 +45,7 @@ while True:
                 break
             #-------------------------------------------
             print(f'try again | you have {life} lives left!')
-        if len(guess) > 1:
-            continue
-        else:
+        if len(guess) == 1:
             guessbank += guess.lower()
 
 if 0 >= life:
