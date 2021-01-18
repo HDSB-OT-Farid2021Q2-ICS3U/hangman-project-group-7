@@ -74,19 +74,20 @@ print('reference -', word, end='')
 fixedWord = list(word)[:-1]
 
 while True:
-    correct = 1
+    correct = True
 # prints line of letters in the word + spaces
     for char in fixedWord:
             if char in guessbank:
                 print(char, end='')
-                correct += 1
             else:
+                correct = False
                 print('_ ', end='')
     print('')
-
+    if correct == True:
+        break
 # input for players guess
     guess = input('enter guess [letter / word] : ')
-    if guess.lower() + '\n' == word or correct == len(fixedWord):
+    if guess.lower() + '\n' == word:
         break
     else:
         if guess.lower() not in fixedWord:
