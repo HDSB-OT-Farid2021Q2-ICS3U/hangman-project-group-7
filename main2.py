@@ -72,7 +72,7 @@ wordbank = open('hangmanwords.txt', 'r')
 # get random line
 word = (wordbank.readlines()[wordIndex])
 # un-comment the line below to see generated world
-print('reference -', word, end='')
+#print('reference -', word, end='')
 
 fixedWord = list(word)[:-1]
 
@@ -100,6 +100,8 @@ while True:
     if guess.lower() + '\n' == word:
         break
     else:
+        if guess.lower() not in fixedWord:
+            life -= 1
         #insert life drawing if/else statments here
         title()
         if life == 6:
@@ -118,7 +120,6 @@ while True:
             break
 
         if guess.lower() not in fixedWord:
-            life -= 1
             print(f'try again | you have {life} lives left!')
         else:
             print(f'you have {life} lives left!')
