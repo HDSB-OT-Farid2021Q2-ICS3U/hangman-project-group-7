@@ -2,7 +2,7 @@
 # Hangman Assignment
 
 ## How to Play:
-    1.  Access the game via the main.py file.
+    1.  Access the game via the MAIN-GAME.py file.
     
     2. Begin the game by pressing on the green triangle at the top right of the screen.
 

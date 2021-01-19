@@ -8,8 +8,11 @@ def win():
 def lose():
     """function for when player loses"""
     print(f"you lost the game :( | the correct word was {word}", end='')
+
 def title():
     print('HANGMAN ELITE'.center(30, '*'))
+
+# life drawing system completed 01-18-21
 def SixLives():
     print("""               +---+            
               |   
@@ -60,26 +63,29 @@ def OneLife():
               ========""")
 
 
-#random number generator
+# word generator system completed 01-15-21
 wordIndex = random.randrange(0, 853 + 1)
 
 #guessbank is a string because i found it to be easier to work w/ and faster performance wise
 guessbank = ''
+
 life = 6
 
 # open wordbank txt file
 wordbank = open('hangmanwords.txt', 'r')
-# get random line
+
+# generate random line
 word = (wordbank.readlines()[wordIndex])
-# un-comment the line below to see generated world
-#print('reference -', word, end='')
 
 fixedWord = list(word)[:-1]
 
 clear() # CLEAR OUTPUT
+
 title()
+
 SixLives()
 
+# loop integrated 01-15-21
 while True:
     correct = True
 # prints line of letters in the word + spaces
@@ -102,7 +108,7 @@ while True:
     else:
         if guess.lower() not in fixedWord:
             life -= 1
-        #insert life drawing if/else statments here
+        # life drawings
         title()
         if life == 6:
             SixLives()
@@ -118,7 +124,6 @@ while True:
             OneLife()
         elif 0 >= life:
             break
-
         if guess.lower() not in fixedWord:
             print(f'try again | you have {life} lives left!')
         else:
@@ -129,6 +134,7 @@ while True:
 
 clear() # CLEAR OUTPUT
 
+# when program finds end term -
 if 0 >= life:
     lose()
     print("""              +---+
