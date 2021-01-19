@@ -14,3 +14,7 @@
 
     6. If you wish to play again, please run the program again.
 
+## Reflection:
+please click the link below to view our reflection document - 
+
+https://docs.google.com/document/d/1dbklVXyKcivKf2M9pFmYSaOZ9jdMekLvisJMEZf0VIs/edit?usp=sharing
