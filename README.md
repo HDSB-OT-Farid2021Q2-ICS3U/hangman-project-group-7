@@ -12,5 +12,5 @@
 
     5. If you do guess the word, the man doesn't get hanged, and you win.
 
-    6. If you wish to play again, follow the prompt given upon completion of the game.
+    6. If you wish to play again, please run the program again.
 
