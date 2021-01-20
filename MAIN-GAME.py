@@ -1,3 +1,9 @@
+# Authors: Dan Grigorof, Ivan Price, Harry Sun
+# Date of Creation: January 13, 2021
+# Description: A python program of a hangman game, a guessing game where you guess if a letter is in a word. 6 incorrect guesses then the man gets hanged and you lose.
+# File Version: 2021-01-19
+
+
 import os
 clear = lambda: os.system('cls')
 import random
